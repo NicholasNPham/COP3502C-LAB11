@@ -72,7 +72,24 @@ def main():
             print(f"{round(average)}%")
 
     elif selection == "2":
-        pass
+
+        assignment_name = input("What is the assignment name: ")
+
+        if assignment_name not in assign_name_to_assign_id:
+            print("Assignment not found")
+        else:
+
+            grade = []
+
+            assignment_id = assign_name_to_assign_id[assignment_name]
+
+            for student in submissions_dict:
+                grade.append(submissions_dict[student][assignment_id])
+
+            print(f"Min: {int(min(grade))}%")
+            print(f"Avg: {(sum(grade) / len(grade)):.0f}%")
+            print(f"Max: {int(max(grade))}%")
+
 
     elif selection == "3":
         pass
