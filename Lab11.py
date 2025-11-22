@@ -50,12 +50,33 @@ def main():
     selection = input("Enter your selection: ")
 
     if selection == "1":
+
+        student_name = input("What is the student's name: ") # Michael Potter
+
+
+        if student_name not in student_data_dict:
+            print("Student name not found")
+        else:
+
+            total_points_overall = 0
+            total_points_earn = 0
+
+            student_id = student_data_dict[student_name] #174
+
+            for assignment_id, grade_percentage in submissions_dict[student_id].items():
+                total_points_earn += assign_id_to_total_points[assignment_id] * (submissions_dict[student_id][assignment_id] / 100 )
+                total_points_overall += assign_id_to_total_points[assignment_id]
+
+            print(total_points_overall)
+            print(total_points_earn)
+            average = (total_points_earn / total_points_overall) * 100
+
+            print(f"{round(average)}%")
+
+    elif selection == "2":
         pass
 
-    if selection == "2":
-        pass
-
-    if selection == "3":
+    elif selection == "3":
         pass
 
 if __name__ == "__main__":
