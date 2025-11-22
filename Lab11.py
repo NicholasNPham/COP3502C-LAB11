@@ -67,8 +67,6 @@ def main():
                 total_points_earn += assign_id_to_total_points[assignment_id] * (submissions_dict[student_id][assignment_id] / 100 )
                 total_points_overall += assign_id_to_total_points[assignment_id]
 
-            print(total_points_overall)
-            print(total_points_earn)
             average = (total_points_earn / total_points_overall) * 100
 
             print(f"{round(average)}%")
