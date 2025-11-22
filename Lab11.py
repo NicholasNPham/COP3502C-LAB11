@@ -6,7 +6,7 @@ import os
 def main():
     student_data_dict = {}
 
-    with open("data\\students.txt", 'r') as file:
+    with open("data/students.txt", 'r') as file:
         for line in file:
             student_id = int(line[0:3])
             name = line[3:].strip()
@@ -17,7 +17,7 @@ def main():
     assign_id_to_total_points = {}
     assign_name_to_assign_id = {}
 
-    with open("data\\assignments.txt", 'r') as file:
+    with open("data/assignments.txt", 'r') as file:
         lines = file.readlines()
         for i in range(0, len(lines), 3):
             assign_id_to_total_points[int(lines[i + 1].strip())] = int(lines[i + 2].strip())
