@@ -46,7 +46,7 @@ def main():
 
     print("1. Student grade")
     print("2. Assignment statistics")
-    print("3. Submission statistics\n")
+    print("3. Assignment graph\n")
     selection = input("Enter your selection: ")
 
     if selection == "1":
