@@ -88,7 +88,7 @@ def main():
                 grade.append(submissions_dict[student][assignment_id])
 
             print(f"Min: {int(min(grade))}%")
-            print(f"Avg: {(sum(grade) / len(grade)):.0f}%")
+            print(f"Avg: {int(sum(grade) / len(grade))}%")
             print(f"Max: {int(max(grade))}%")
 
 
