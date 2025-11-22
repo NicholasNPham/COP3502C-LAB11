@@ -1,4 +1,5 @@
 import os
+import matplotlib.pyplot as plt
 
 # file_path_student = r"data\students.txt"
 # file_path_assignment = r"data\assignments.txt"
@@ -92,7 +93,21 @@ def main():
 
 
     elif selection == "3":
-        pass
+        assignment_name = input("What is the assignment name: ")
+
+        if assignment_name not in assign_name_to_assign_id:
+            print("Assignment not found")
+        else:
+
+            scores = []
+
+            assignment_id = assign_name_to_assign_id[assignment_name]
+
+            for student in submissions_dict:
+                scores.append(submissions_dict[student][assignment_id])
+
+            plt.hist(scores, bins=[45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100])
+            plt.show()
 
 if __name__ == "__main__":
     main()
