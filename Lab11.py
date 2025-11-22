@@ -1,7 +1,11 @@
-file_path_student = "E:\PycharmProjects\COP3502C-LAB11\data\students.txt"
+file_path_student = r"data\students.txt"
+
+student_data_dict = {}
 
 with open(file_path_student, 'r') as file:
     for line in file:
         student_id = line[0:3]
         name = line[3:].strip()
-        print(student_id, name)
+        student_data_dict[student_id] = name
+
+print(student_data_dict)
